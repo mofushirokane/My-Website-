@@ -1,0 +1,188 @@
+body {
+  padding: 1.5em;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #000;
+  color: rgb(250, 250, 250);
+  font-size: 1.2em;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.5;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+header, h2, h3 {
+  color: green;
+}
+
+em, blockquote {
+  color: aliceblue;
+}
+
+blockquote {
+	text-align: middle;
+}
+
+hr {
+  border: 1px dashed #008223;
+  margin: 1.5em 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 3em;
+  color: #008223;
+}
+
+a:link {
+  color: limegreen;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: overline;
+}
+
+a:active {
+  color: green;
+}
+
+/* Hiệu ứng màn hình CRT */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.container {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Hiệu ứng khi chuyển page*/
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.avatar-frame img {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #008223;
+  object-fit: cover;
+  padding: 4px;
+  background: #050505;
+}
+
+.bio-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.nickname {
+  color: #008223;
+  font-size: 0.8em;
+}
+
+.facts-list {
+  text-align: left;
+}
+
+.facts-list li, .skills-grid li {
+  margin-bottom: 0.4rem;
+  color: #b0c4de;
+}
+
+.explore-btn, .raw-btn {
+  display: inline-block;
+  border: 1px dashed limegreen;
+  padding: 0.6em 1.2em;
+  background: transparent;
+  color: limegreen;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.explore-btn:hover, .raw-btn:hover {
+  background: rgba(0, 130, 35, 0.2);
+  color: lime;
+  text-decoration: none;
+  border-color: lime;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  border: 1px dashed #008223;
+  padding: 1.5rem;
+  background: #050505;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px dashed #008223;
+  padding: 1.2rem;
+  background: #050505;
+}
+
+.content-block {
+  margin: 2rem 0;
+}
+
+.world-canvas-box {
+  border: 1px dashed #008223;
+  padding: 2rem;
+  text-align: center;
+  background: #050505;
+  color: #555;
+}
+
+.page-nav {
+  margin: 3rem 0 1rem 0;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.glitch-text {
+  color: lime;
+  border-left: 2px solid lime;
+  padding-left: 10px;
+  margin-top: 10px;
+}	
