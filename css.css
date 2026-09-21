@@ -113,6 +113,10 @@ a:active {
   color: #b0c4de;
 }
 
+.action-nav" {
+	text-align: center;
+}
+
 .explore-btn, .raw-btn {
   display: inline-block;
   border: 1px dashed limegreen;
